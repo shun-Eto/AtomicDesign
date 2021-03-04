@@ -3,13 +3,12 @@ import * as ReactDOM from "react-dom";
 import { Router } from "react-router-dom";
 import { createBrowserHistory, createHashHistory } from "history";
 
+//	styles
+import "./styles.css";
 import { ThemeProvider as MuiThemeProvider } from "@material-ui/styles";
 import { ThemeProvider as StyledThemeProvider } from "styled-components";
 import { StylesProvider } from "@material-ui/core";
 import { muiTheme, origTheme } from "./assets/styles/theme";
-
-//	styles
-import "./styles.css";
 
 //	FontAwesomeIcon
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -28,7 +27,9 @@ const history = (() => {
 	}
 })();
 
-//  Providers wrap
+/*
+ *  Provider関係はここで全てラップする
+ */
 ReactDOM.render(
 	<StylesProvider injectFirst>
 		<MuiThemeProvider theme={{ ...muiTheme, origTheme }}>

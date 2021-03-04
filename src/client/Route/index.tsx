@@ -7,7 +7,9 @@ import Home from "../Pages/Home";
 const Component: React.FC = () => {
 	return (
 		<Switch>
-			{/*-*-*-*-* Home *-*-*-*-*/}
+			{/*
+			 * 全てここでルーティング
+			 */}
 			<Route exact path={"/"} component={Home} />
 		</Switch>
 	);
