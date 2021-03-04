@@ -1,0 +1,30 @@
+import * as React from "react";
+
+import Header from "../../Organisms/Header";
+import Footer from "../../Organisms/Footer";
+
+import { Container } from "./styles";
+
+interface ComponentProps {}
+const Component: React.FC<ComponentProps> = (props) => {
+	const headerRef = React.useRef<HTMLDivElement>(null);
+	const footerRef = React.useRef<HTMLDivElement>(null);
+	const [headerHeight, setHeaderHeight] = React.useState(0);
+	const [footerHeight, setFooterHeight] = React.useState(0);
+
+	React.useEffect(() => {
+		if (headerRef.current && footerRef.current) {
+			setHeaderHeight(headerRef.current.clientHeight);
+			setFooterHeight(footerRef.current.clientHeight);
+		}
+	}, [headerRef, footerRef]);
+	return (
+		<Container headerHeight={headerHeight} footerHeight={footerHeight}>
+			<Header componentRef={headerRef} />
+			{props.children}
+			<Footer componentRef={footerRef} />
+		</Container>
+	);
+};
+
+export default Component;
