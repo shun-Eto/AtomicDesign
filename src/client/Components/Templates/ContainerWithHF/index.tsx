@@ -18,9 +18,13 @@ const Component: React.FC<ComponentProps> = (props) => {
 			setFooterHeight(footerRef.current.clientHeight);
 		}
 	}, [headerRef, footerRef]);
+
 	return (
 		<Container headerHeight={headerHeight} footerHeight={footerHeight}>
-			<Header componentRef={headerRef} />
+			<Header
+				componentRef={headerRef}
+				style={{ backgroundColor: "red" }}
+			/>
 			{props.children}
 			<Footer componentRef={footerRef} />
 		</Container>
