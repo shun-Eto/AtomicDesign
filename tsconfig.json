@@ -10,10 +10,11 @@
 		"jsx": "react",
 		"allowSyntheticDefaultImports": true,
 		"keyofStringsOnly": true,
-		"baseUrl": "./src",
+		"baseUrl": "./",
 		"paths": {
-			"@src/*": ["*"],
-			"import-png": ["src/types/import-png"]
+			"@src/*": ["src/*"],
+			"@client/*": ["src/client/*"],
+			"@server/*": ["src/server/*"]
 		},
 		"lib": ["es6", "dom", "es2015"],
 		"noImplicitAny": true,

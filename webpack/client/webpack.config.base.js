@@ -16,7 +16,6 @@ const config = {
 			{
 				test: /\.(ts|tsx)$/,
 				use: [
-					"babel-loader",
 					{
 						loader: "ts-loader",
 						options: {
@@ -58,6 +57,10 @@ const config = {
 	},
 	resolve: {
 		extensions: [".ts", ".tsx", ".js", ".jsx", "scss", "css"],
+		alias: {
+			"@src": path.resolve(__dirname, "../../src"),
+			"@client": path.resolve(__dirname, "../../src/client"),
+		},
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
