@@ -6,15 +6,15 @@
 	"license": "MIT",
 	"scripts": {
 		"__client__": "========= client =========",
-		"client": "webpack-dev-server --config webpack/client/webpack.config.dev.js --open",
 		"clientBuild": "webpack --config webpack/client/webpack.config.prod.js",
 		"clientStart": "node client",
+		"client": "webpack-dev-server --config webpack/client/webpack.config.dev.js --open",
 		"_comment_server": "========= server =========",
 		"nodemon": "nodemon dist/server/bundle.js",
 		"serverDevBuild": "webpack --config ./webpack/server/webpack.config.dev.js",
-		"server": "run-p serverDevBuild nodemon",
 		"serverBuild": "webpack --config ./webpack/server/webpack.config.prod.js",
 		"serverStart": "node dist/server/bundle.js",
+		"server": "run-p serverDevBuild nodemon",
 		"__comment__": "========= git =========",
 		"git_add": "git add .",
 		"git_commit": "git commit -m 'commit'",
@@ -76,7 +76,6 @@
 		"webpack-merge": "^4.2.2",
 		"webpack-node-externals": "^1.7.2"
 	},
-	"devDependencies": {},
 	"jest": {
 		"moduleFileExtensions": [
 			"ts",
