@@ -13,8 +13,8 @@ jobs:
         steps:
             - uses: actions/checkout@v2
 
-            - name: Run a one-line script
-              run: echo Hello, world!
+            - name: Install packages
+              run: yarn install
 
             - name: Run a multi-line script
               run: |
