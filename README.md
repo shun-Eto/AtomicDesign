@@ -1,6 +1,6 @@
 # Atomic Design with MUI
 
-AtomicDesign に基づき MaterialUI を利用し構成されたコンポーネント
+AtomicDesign に基づき MaterialUI を利用し構成されたコンポーネント  
 ※AtomicDesign の解釈は個人に依存します。
 
 ## Setup
