@@ -1,4 +1,4 @@
-# AtomicDesign
+# `Atomic Design Components`
 
 Atomic Design Components
 
