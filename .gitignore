@@ -1,6 +1,6 @@
-/dist/client/
-/dist/server/
-/node_modules/
-/webpack/server/
-/src/server/
-/.vscode/
+dist/client/
+dist/server/
+node_modules/
+webpack/server/
+src/server/
+.vscode/
