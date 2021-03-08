@@ -8,7 +8,7 @@ interface Values {
 }
 type Key = keyof Values;
 
-export class createFontSize {
+export default class CreateFontSize {
   values: Values = {
     xs: 10.5,
     sm: 13,
@@ -17,7 +17,9 @@ export class createFontSize {
     lg: 32,
     xl: 40
   };
+
   unit = "px";
+
   keys: Key[] = ["xs", "sm", "md", "lg", "xl"];
 
   fontSize(key?: Key) {
@@ -25,10 +27,9 @@ export class createFontSize {
       return typeof this.values[key] === "number"
         ? `${this.values[key]}${this.unit}`
         : this.values[key];
-    } else {
-      return typeof this.values.basic === "number"
-        ? `${this.values.basic}${this.unit}`
-        : this.values.basic;
     }
+    return typeof this.values.basic === "number"
+      ? `${this.values.basic}${this.unit}`
+      : this.values.basic;
   }
 }

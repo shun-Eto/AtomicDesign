@@ -14,10 +14,20 @@ export interface BreakpointProps {
   values: Values;
 }
 
-export class createBreakpoint {
-  values: Values = { xs: 0, sm: 600, toppan: 720, md: 960, lg: 1280, xl: 1920 };
+export default class CreateBreakpoint {
+  values: Values = {
+    xs: 0,
+    sm: 600,
+    toppan: 720,
+    md: 960,
+    lg: 1280,
+    xl: 1920
+  };
+
   unit = "px";
+
   step = 5;
+
   keys: Breakpoint[] = ["xs", "sm", "md", "lg", "xl"];
 
   constructor(values?: Values) {
@@ -25,17 +35,17 @@ export class createBreakpoint {
   }
 
   up(key: Breakpoint): string {
-    var value = this.values[key];
+    const value = this.values[key];
     return "@media (min-width:".concat(String(value)).concat(this.unit, ")");
   }
 
   down(key: Breakpoint): string {
-    var endIndex = this.keys.indexOf(key) + 1;
-    var upperbound = this.values[this.keys[endIndex]];
+    const endIndex = this.keys.indexOf(key) + 1;
+    const upperbound = this.values[this.keys[endIndex]];
 
     if (endIndex === this.keys.length) return this.up("xs");
 
-    var value = upperbound;
+    const value = upperbound;
     return "@media (max-width:"
       .concat(String(value - this.step / 100))
       .concat(this.unit, ")");

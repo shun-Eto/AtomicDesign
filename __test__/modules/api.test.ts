@@ -1,7 +1,7 @@
 import api from "@client/assets/modules/api";
 
 describe("Checkt Client API Methods", () => {
-  test("test method", async () => {
+  test("method", async () => {
     const response = await api.test();
     expect(response).toMatchObject({ success: true });
   });

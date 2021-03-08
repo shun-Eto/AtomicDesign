@@ -8,13 +8,14 @@ interface Colors {
   grey: Color;
   orange: Color;
 }
-export class createColorPicker {
+export default class CreateColorPicker {
   colors: Colors = {
     black: { root: "rgba(0, 0, 0, 1)" },
     white: { root: "rgba(255, 255, 255, 1)" },
     grey: { root: "rgba(33, 33, 33, 1)", 500: "rgba(158, 158, 158, 1)" },
     orange: { root: "rgba(233, 69, 44, 1)" }
   };
+
   defaultColors = { ...this.colors };
 
   constructor(colors?: Colors) {
@@ -39,8 +40,7 @@ export class createColorPicker {
       return targetColor
         ? targetColor.replace("1)", `${opacity})`)
         : this.colors[color].root;
-    } else {
-      return this.colors[color].root;
     }
+    return this.colors[color].root;
   }
 }

@@ -16,3 +16,10 @@ AtomicDesign に基づき MaterialUI を利用し構成されたコンポーネ�
 ### フォルダ名に関して
 
 コンポーネントを構成するフォルダに関しては大文字から始める
+
+### lint 参考資料
+
+https://dev.classmethod.jp/articles/eslint-configurations-2020/
+
+' ~~~ ' was used before it was defined
+https://stackoverflow.com/questions/63818415/react-was-used-before-it-was-defined
