@@ -25,3 +25,13 @@ jobs:
               run: |
                   echo Add other actions to build,
                   echo test, and deploy your project.
+
+            - name: Lint
+              run: yarn lint
+
+            - name: Test
+
+            - name: Build
+              run: yarn buil
+
+            - name: Deploy
