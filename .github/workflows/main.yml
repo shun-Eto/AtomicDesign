@@ -26,10 +26,5 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
 
-      - name: Lint
-
       - name: Test
-
-      - name: Build
-
-      - name: Deploy
+        run: yarn test
