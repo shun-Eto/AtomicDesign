@@ -10,9 +10,7 @@ module.exports = {
     {
       files: ["*.ts", "*.tsx"],
       parser: require.resolve("@typescript-eslint/parser"),
-      parserOptions: {
-        sourceType: "module"
-      },
+      parserOptions: { sourceType: "module" },
       plugins: ["@typescript-eslint", "react", "import"],
       rules: {
         "import/no-unresolved": "off",
@@ -69,9 +67,7 @@ module.exports = {
       },
       settings: {
         "import/resolver": {
-          node: {
-            extensions: [".ts", ".tsx", ".js", ".jsx", ".json"]
-          },
+          node: { extensions: [".ts", ".tsx", ".js", ".jsx", ".json"] },
           webpack: {
             config: "./webpack/client/webpack.config.base.js",
             extensions: [".js", ".jsx", ".ts", ".tsx", ".mjs"]
@@ -80,9 +76,7 @@ module.exports = {
         node: {
           tryExtensions: [".ts", ".tsx", ".js", ".jsx", ".json", ".node"]
         },
-        react: {
-          version: "detect"
-        }
+        react: { version: "detect" }
       }
     }
   ]
