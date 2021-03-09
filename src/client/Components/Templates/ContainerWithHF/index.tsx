@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 
 import Header from "../../Organisms/Header";
 import Footer from "../../Organisms/Footer";
