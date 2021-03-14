@@ -1,6 +1,8 @@
 dist/client/
-dist/server/
 node_modules/
-webpack/server/
-src/server/
 .vscode/
+
+
+package-lock.json
+package-lock
+yarn.lock
