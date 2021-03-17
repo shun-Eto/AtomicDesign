@@ -1,10 +1,10 @@
 import * as React from "react";
 
-import ContainerWithHF from "@client/Components/Templates/ContainerWithHF";
+import ContainerWithHF from "@src/client/views/Components/Templates/ContainerWithHF";
 import { useDispatch } from "react-redux";
 import { addTask } from "./modules";
 import { useSelector } from "react-redux";
-import { RootState } from "../../redux/rootReducer";
+import { RootState } from "../../../redux/rootReducer";
 
 const Component: React.FC = () => {
   const dispatch = useDispatch();

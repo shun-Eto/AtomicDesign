@@ -21,7 +21,7 @@ import { far } from "@fortawesome/free-regular-svg-icons";
 import { muiTheme, origTheme } from "./assets/styles/theme";
 
 //  Route
-import Route from "./Route";
+import Route from "./views/Route";
 
 library.add(fab, fas, far);
 
