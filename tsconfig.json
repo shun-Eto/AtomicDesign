@@ -13,6 +13,7 @@
     "baseUrl": "./",
     "paths": {
       "@src/*": ["src/*"],
+      "@api/*": ["src/api/*"],
       "@assets/*": ["src/assets/*"],
       "@redux/*": ["src/redux/*"],
       "@types/*": ["src/types/*"],

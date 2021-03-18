@@ -1,9 +1,9 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
+import "../public/styles.css";
 
 //  Providers
-import "../public/styles.css";
-import Providers from "./providers";
+import Providers from "./views/Providers";
 
 //	FontAwesomeIcon
 import { library } from "@fortawesome/fontawesome-svg-core";
