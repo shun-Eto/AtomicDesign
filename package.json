@@ -2,7 +2,7 @@
   "name": "development",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "shun <prog1.shun0830@gmail.com>",
+  "author": "shun <prog.shun0830@gmail.com>",
   "license": "MIT",
   "scripts": {
     "start:dev": "webpack-dev-server --config ./webpack/webpack.config.dev.js --open",
@@ -49,20 +49,17 @@
     "mini-css-extract-plugin": "^1.3.9",
     "moment": "^2.24.0",
     "mongodb": "^3.5.6",
-    "node-sass": "^4.14.0",
     "nodemon": "^2.0.3",
     "notistack": "^0.9.11",
     "npm-run-all": "^4.1.5",
     "path": "^0.12.7",
     "prettier": "^2.2.1",
-    "query-string": "^6.13.8",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-is": "^17.0.1",
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.1.2",
     "redux": "^4.0.5",
-    "sass-loader": "^8.0.2",
     "style-loader": "^1.2.0",
     "styled-components": "^5.2.1",
     "ts-jest": "^26.5.3",
@@ -73,23 +70,6 @@
     "webpack-dev-server": "^3.10.3",
     "webpack-merge": "^4.2.2",
     "webpack-node-externals": "^1.7.2"
-  },
-  "jest": {
-    "moduleFileExtensions": [
-      "ts",
-      "js"
-    ],
-    "transform": {
-      "^.+\\.ts$": "ts-jest"
-    },
-    "globals": {
-      "ts-jest": {
-        "tsConfig": "tsconfig.json"
-      }
-    },
-    "moduleNameMapper": {
-      "^@client(.*)$": "<rootDir>/src/client/$1"
-    }
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.16.1",
