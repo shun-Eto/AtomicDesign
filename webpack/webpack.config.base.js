@@ -1,13 +1,12 @@
-// react_start/webpack.config.js
 const path = require("path");
-
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const config = {
-  entry: path.resolve(__dirname, "../src/client/index.tsx"),
+  entry: path.resolve(__dirname, "../src/index.tsx"),
   output: {
-    path: path.resolve(__dirname, "../dist/client"),
+    path: path.resolve(__dirname, "../dist"),
     filename: "bundle.js",
     publicPath: "/"
   },
@@ -15,42 +14,19 @@ const config = {
     rules: [
       {
         test: /\.(ts|tsx)$/,
-        use: [
-          {
-            loader: "ts-loader",
-            options: { transpileOnly: true }
-          }
-        ],
+        use: [{ loader: "ts-loader", options: { transpileOnly: true } }],
         exclude: /node_modules/
       },
+
       {
-        test: /(\.s[ac]ss)$/,
+        test: /\.css$/,
         use: [
-          "style-loader", // creates style nodes from JS strings
-          "css-loader", // translates CSS into CommonJS
-          "sass-loader" // compiles Sass to CSS, using Node Sass by default
+          { loader: MiniCssExtractPlugin.loader, options: {} },
+          "css-loader"
         ]
       },
-      {
-        test: /\.css/,
-        use: [
-          "style-loader",
-          {
-            loader: "css-loader",
-            options: { url: false }
-          }
-        ]
-      },
-      {
-        // 追記
-        test: /\.png$/,
-        loaders: "url-loader"
-      },
-      {
-        // 追記
-        test: /\.jpg$/,
-        loaders: "url-loader"
-      }
+      { test: /\.png$/, loaders: "url-loader" },
+      { test: /\.jpg$/, loaders: "url-loader" }
     ]
   },
   resolve: {
@@ -62,9 +38,11 @@ const config = {
     }
   },
   plugins: [
+    new MiniCssExtractPlugin({}),
     new HtmlWebpackPlugin({
-      template: "./src/client/index.html",
-      filename: "index.html"
+      template: "./public/index.html",
+      filename: "index.html",
+      favicon: "./public/favicon.png"
     }),
     new ForkTsCheckerWebpackPlugin({ silent: true })
   ]

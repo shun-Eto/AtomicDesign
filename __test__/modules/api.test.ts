@@ -1,4 +1,4 @@
-import api from "@client/assets/modules/api";
+import api from "@src/assets/modules/api";
 
 describe("Checkt Client API Methods", () => {
   test("method", async () => {
