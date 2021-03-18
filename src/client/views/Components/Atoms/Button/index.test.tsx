@@ -1,15 +1,14 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import { ThemeProvider as StyledThemeProvider } from "styled-components";
-import { muiTheme, origTheme } from "../../../../assets/styles/theme";
+import Provider from "../../../../providers";
 
 //  test components
 import { StyledButton } from "./index";
 
 const WrappedStyledButton = () => (
-  <StyledThemeProvider theme={{ ...muiTheme, ...origTheme }}>
+  <Provider>
     <StyledButton />
-  </StyledThemeProvider>
+  </Provider>
 );
 
 describe("App", () => {

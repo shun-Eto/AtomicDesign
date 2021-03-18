@@ -5,9 +5,9 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 
 const config = {
-  entry: path.resolve(__dirname, "../../src/client/index.tsx"),
+  entry: path.resolve(__dirname, "../src/client/index.tsx"),
   output: {
-    path: path.resolve(__dirname, "../../dist/client"),
+    path: path.resolve(__dirname, "../dist/client"),
     filename: "bundle.js",
     publicPath: "/"
   },
@@ -56,9 +56,9 @@ const config = {
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".jsx", "scss", "css"],
     alias: {
-      "@src": path.resolve(__dirname, "../../src"),
-      "@client": path.resolve(__dirname, "../../src/client"),
-      "@types": path.resolve(__dirname, "../../src/types")
+      "@src": path.resolve(__dirname, "../src"),
+      "@client": path.resolve(__dirname, "../src/client"),
+      "@types": path.resolve(__dirname, "../src/types")
     }
   },
   plugins: [

@@ -84,7 +84,7 @@ module.exports = {
         "import/resolver": {
           node: { extensions: [".ts", ".tsx", ".js", ".jsx", ".json"] },
           webpack: {
-            config: "./webpack/client/webpack.config.base.js",
+            config: "./webpack/webpack.config.base.js",
             extensions: [".js", ".jsx", ".ts", ".tsx", ".mjs"]
           }
         },
