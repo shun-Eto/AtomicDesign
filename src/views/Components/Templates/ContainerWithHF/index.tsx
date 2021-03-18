@@ -1,7 +1,7 @@
 import React from "react";
 
-import Header from "../../Organisms/Header";
-import Footer from "../../Organisms/Footer";
+import Header from "~views/Components/Organisms/Header";
+import Footer from "~views/Components/Organisms/Footer";
 
 import { Container } from "./styles";
 

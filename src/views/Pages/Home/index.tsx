@@ -4,7 +4,7 @@ import ContainerWithHF from "~src/views/Components/Templates/ContainerWithHF";
 import { useDispatch } from "react-redux";
 import { addTask } from "./modules";
 import { useSelector } from "react-redux";
-import { RootState } from "../../../redux/store/reducer";
+import { RootState } from "~redux/store/reducer";
 
 import { StyledSelect } from "./styles";
 
