@@ -1,20 +1,16 @@
 import { createMuiTheme, Theme as MuiTheme } from "@material-ui/core";
-import CreateBreakpoint, { BreakpointProps } from "./createBreakpoint";
-import CreateColorPicker from "./createColorPicker";
-import CreateFontSize from "./createFontSize";
+import CreateColorPicker from "./CreateColorPicker/Class";
+import CreateFontSize from "./CreateFontSize/Class";
 
-const createBP = new CreateBreakpoint();
 const createCP = new CreateColorPicker();
 const createFS = new CreateFontSize();
 
 interface OrigTheme {
-  breakpoint: BreakpointProps;
   fontSize: typeof createFS.fontSize;
   colorPicker: typeof createCP.colorPicker;
 }
 
 const origTheme: OrigTheme = {
-  breakpoint: createBP.breakpoint(),
   fontSize: key => createFS.fontSize(key),
   colorPicker: (color, option) => createCP.colorPicker(color, option)
 };
@@ -28,15 +24,21 @@ const muiTheme = createMuiTheme({
       main: "rgba(55,5,5,1)"
     },
     text: {
-      primary: "rgba(0,0,0,1)",
-      secondary: "rgba(100,100,100,1)"
+      primary: "rgba(240,242,236,1)",
+      secondary: "rgba(240,242,236,1)"
     }
   }
 });
 
-export { muiTheme, origTheme };
+export type Theme = OrigTheme & MuiTheme;
 
-type Theme = OrigTheme & MuiTheme;
+//  extends styled component theme interface
 declare module "styled-components" {
   export interface DefaultTheme extends Theme {}
 }
+
+//  extends mui theme interface
+declare module "@material-ui/core/styles/createMuiTheme" {
+  interface Theme extends OrigTheme {}
+}
+export { muiTheme, origTheme };

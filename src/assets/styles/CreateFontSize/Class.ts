@@ -1,12 +1,4 @@
-interface Values {
-  xs: number | string;
-  sm: number | string;
-  md: number | string;
-  basic: number | string;
-  lg: number | string;
-  xl: number | string;
-}
-type Key = keyof Values;
+import { Values, Key } from "./types";
 
 export default class CreateFontSize {
   values: Values = {
@@ -15,12 +7,13 @@ export default class CreateFontSize {
     basic: 16,
     md: 24,
     lg: 32,
-    xl: 40
+    xl: 40,
+    icon: 30
   };
 
   unit = "px";
 
-  keys: Key[] = ["xs", "sm", "md", "lg", "xl"];
+  keys: Key[] = ["xs", "sm", "md", "lg", "xl", "icon"];
 
   fontSize(key?: Key) {
     if (key) {

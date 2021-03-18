@@ -8,13 +8,13 @@ import { StylesProvider } from "@material-ui/core";
 
 const OrigThemeProvider: React.FC = props => {
   return (
-    <StylesProvider injectFirst>
-      <MuiThemeProvider theme={{ ...muiTheme, origTheme }}>
+    <MuiThemeProvider theme={{ ...muiTheme, ...origTheme }}>
+      <StylesProvider injectFirst>
         <StyledThemeProvider theme={{ ...muiTheme, ...origTheme }}>
           {props.children}
         </StyledThemeProvider>
-      </MuiThemeProvider>
-    </StylesProvider>
+      </StylesProvider>
+    </MuiThemeProvider>
   );
 };
 
