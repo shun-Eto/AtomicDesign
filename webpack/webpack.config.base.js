@@ -10,7 +10,6 @@ const config = {
     filename: "bundle.js",
     publicPath: "/"
   },
-  devtool: "source-map",
   module: {
     rules: [
       {
