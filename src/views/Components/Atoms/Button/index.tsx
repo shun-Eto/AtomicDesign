@@ -1,3 +1,3 @@
-import { StyledButton } from "./styles";
+import { StyledButton, StyledMuiButton } from "./styles";
 
-export { StyledButton };
+export { StyledButton, StyledMuiButton };

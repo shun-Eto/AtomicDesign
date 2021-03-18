@@ -28,8 +28,8 @@ const muiTheme = createMuiTheme({
       main: "rgba(55,5,5,1)"
     },
     text: {
-      primary: "rgba(240,242,236,1)",
-      secondary: "rgba(240,242,236,1)"
+      primary: "rgba(0,0,0,1)",
+      secondary: "rgba(100,100,100,1)"
     }
   }
 });
