@@ -12,12 +12,12 @@
     "keyofStringsOnly": true,
     "baseUrl": "./",
     "paths": {
-      "@src/*": ["src/*"],
-      "@api/*": ["src/api/*"],
-      "@assets/*": ["src/assets/*"],
-      "@redux/*": ["src/redux/*"],
-      "@types/*": ["src/types/*"],
-      "@views/*": ["src/views/*"]
+      "~src/*": ["src/*"],
+      "~api/*": ["src/api/*"],
+      "~assets/*": ["src/assets/*"],
+      "~redux/*": ["src/redux/*"],
+      "~types/*": ["src/types/*"],
+      "~views/*": ["src/views/*"]
     },
     "lib": ["es6", "dom", "es2015"],
     "noImplicitAny": true,

@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import ContainerWithHF from "@src/views/Components/Templates/ContainerWithHF";
+import ContainerWithHF from "~src/views/Components/Templates/ContainerWithHF";
 import { useDispatch } from "react-redux";
 import { addTask } from "./modules";
 import { useSelector } from "react-redux";

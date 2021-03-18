@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import Provider from "../../../../providers";
+import Provider from "~views/Providers";
 
 //  test components
 import { StyledButton } from "./index";

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { muiTheme, origTheme } from "@assets/styles/theme";
+import { muiTheme, origTheme } from "~assets/styles/theme";
 
 import { ThemeProvider as MuiThemeProvider } from "@material-ui/styles";
 import { ThemeProvider as StyledThemeProvider } from "styled-components";

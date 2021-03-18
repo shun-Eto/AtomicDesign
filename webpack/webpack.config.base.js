@@ -32,12 +32,12 @@ const config = {
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".jsx", "scss", "css"],
     alias: {
-      "@src": path.resolve(__dirname, "../src"),
-      "@api": path.resolve(__dirname, "../src/api"),
-      "@assets": path.resolve(__dirname, "../src/assets"),
-      "@redux": path.resolve(__dirname, "../src/redux"),
-      "@types": path.resolve(__dirname, "../src/types"),
-      "@views": path.resolve(__dirname, "../src/views")
+      "~src": path.resolve(__dirname, "../src"),
+      "~api": path.resolve(__dirname, "../src/api"),
+      "~assets": path.resolve(__dirname, "../src/assets"),
+      "~redux": path.resolve(__dirname, "../src/redux"),
+      "~types": path.resolve(__dirname, "../src/types"),
+      "~views": path.resolve(__dirname, "../src/views")
     }
   },
   plugins: [
