@@ -12,17 +12,8 @@ library.add(fab, fas, far);
 //  Route
 import Route from "./views/Route";
 
-//  Providers
-import { muiTheme, origTheme } from "~assets/styles/theme";
-
 //  providers
 import Providers from "./views/Providers";
-import {
-  ThemeProvider as MuiThemeProvider,
-  StylesProvider as MuiStylesProvider
-} from "@material-ui/styles";
-import { ThemeProvider as StyledThemeProvider } from "styled-components";
-import ReduxProvider from "./views/Providers/Redux";
 
 ReactDOM.render(
   <Providers>
