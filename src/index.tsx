@@ -2,9 +2,6 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import "../public/styles.css";
 
-//  Providers
-import Providers from "./views/Providers";
-
 //	FontAwesomeIcon
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
@@ -14,6 +11,9 @@ library.add(fab, fas, far);
 
 //  Route
 import Route from "./views/Route";
+
+//  Providers
+import Providers from "./views/Providers";
 
 ReactDOM.render(
   <Providers>
