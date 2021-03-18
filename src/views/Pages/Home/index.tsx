@@ -8,8 +8,6 @@ import { RootState } from "../../../redux/store/reducer";
 
 import { StyledSelect } from "./styles";
 
-import { StyledButton } from "../../Components/Atoms/Button";
-
 const Component: React.FC = () => {
   const dispatch = useDispatch();
   const { tasks } = useSelector((state: RootState) => state.tasks);
@@ -27,7 +25,8 @@ const Component: React.FC = () => {
       <div>
         <StyledSelect fullWidth />
       </div>
-      <StyledButton>test</StyledButton>
+
+      <div style={{ margin: 10, width: 300 }}></div>
     </ContainerWithHF>
   );
 };

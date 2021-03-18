@@ -13,9 +13,10 @@
     "baseUrl": "./",
     "paths": {
       "@src/*": ["src/*"],
-      "@client/*": ["src/client/*"],
-      "@server/*": ["src/server/*"],
-      "@types/*": ["src/types/*"]
+      "@assets/*": ["src/assets/*"],
+      "@redux/*": ["src/redux/*"],
+      "@types/*": ["src/types/*"],
+      "@views/*": ["src/views/*"]
     },
     "lib": ["es6", "dom", "es2015"],
     "noImplicitAny": true,
